@@ -3,5 +3,4 @@ FROM node:16-alpine
 WORKDIR /home/ilovedocker/app
 
 RUN cp hello.sh /home/ilovedocker/app \
-
-CMD ["sh", "-c", "./hello.sh"]
+CMD ["sh", "hello.sh"]
