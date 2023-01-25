@@ -2,6 +2,6 @@ FROM node:16-alpine
 
 WORKDIR /home/ilovedocker/app
 
-RUN cp hello.sh /home/ilovedocker/app \
-&& cd /home/ilovedocker/app \
-CMD ["sh", "-c", "hello.sh"]
+COPY ["hello.sh", "/home/ilovedocker/app"]
+RUN cd /home/ilovedocker/app
+ENTRYPOINT ["sh", "-c", "hello.sh"]
